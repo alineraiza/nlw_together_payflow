@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/themes/app_image.dart';
+import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/appcolors.dart';
 
 class SplashPage extends StatelessWidget {
@@ -16,7 +16,6 @@ class SplashPage extends StatelessWidget {
           Center(child: Image.asset(AppImages.logoFull)),
         ],
       ),
-
     );
       
   }
