@@ -11,7 +11,7 @@ class UserModel {
       return UserModel(name: map['name'], photoURL: map['photoURL']);
   }
 
-  factory UserModel.fromjson(String json) => UserModel.fromMap(jsonDecode(json));
+  factory UserModel.fromJson(String json) => UserModel.fromMap(jsonDecode(json));
 
   Map<String, dynamic> toMap() => {
     "name" : name,

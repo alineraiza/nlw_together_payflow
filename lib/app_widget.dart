@@ -13,10 +13,10 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.primary,
       ),
-      initialRoute: "/splash",
+      initialRoute: "/home",
       routes: {
-        "/splash" : (context) => SplashPage(),
-        "/home" : (context) => HomePage(),
+        "/splash": (context) => SplashPage(),
+        "/home": (context) => HomePage(),
         "/login": (context) => LoginPage(),
       },
     );

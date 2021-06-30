@@ -16,23 +16,21 @@ class AuthController{
       Navigator.pushReplacementNamed(context, "/loginPage");
     }
   }
-  Future <void> saveUser(UserModel user) async{
-    final instace = await SharedPreferences.getInstance(); 
-    await instace.setString("user", user.toJson());
+  Future<void>saveUser(UserModel user) async{
+    final instance = await SharedPreferences.getInstance(); 
+    await instance.setString("user", user.toJson());
     return;
   }
 
-   Future <void> currentUser(BuildContext context) async{
-    final instace = await SharedPreferences.getInstance(); 
+   Future<void>currentUser(BuildContext context) async{
+    final instance = await SharedPreferences.getInstance(); 
     await Future.delayed(Duration(seconds: 2));
-    if(instace.containsKey("user")){
-      final json = instace.get("user") as String;
-      setUser(context, UserModel.fromjson(json));
+    if(instance.containsKey("user")){
+      final json = instance.get("user") as String;
+      setUser(context, UserModel.fromJson(json));
       return;
     } else{
       setUser(context, null);
     }
-    
   }
-
 }
