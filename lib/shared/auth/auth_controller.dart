@@ -13,7 +13,7 @@ class AuthController{
       _user = user;
       Navigator.pushReplacementNamed(context, "/home");
     } else{
-      Navigator.pushReplacementNamed(context, "/loginPage");
+      Navigator.pushReplacementNamed(context, "/login");
     }
   }
   Future<void>saveUser(UserModel user) async{
