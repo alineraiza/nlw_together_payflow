@@ -27,7 +27,6 @@ class SocialLoginButton extends StatelessWidget {
                 Image.asset(AppImages.google),
                 SizedBox(width:16),
                 Container(
-                  
                   height: 56, width:2, color: AppColors.stroke),
               ]
             )),
