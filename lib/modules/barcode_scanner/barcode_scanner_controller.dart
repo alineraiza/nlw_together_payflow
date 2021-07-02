@@ -16,4 +16,6 @@ class BarcodeSacannerController{
       status = BarcodeScannerStatus.error(e.toString());
     }
   }
+
+  
 }
