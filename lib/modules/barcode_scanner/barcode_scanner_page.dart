@@ -48,7 +48,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
             builder: (_, status, __) {
               if (status.showCamera) {
                 return Container(
-                  child: status.cameraController!.buildPreview(),
+                  child: controller.cameraController!.buildPreview(),
                 );
               } else {
                 return Container();
@@ -77,7 +77,9 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
               ]),
               bottomNavigationBar: SetLabelButtons(
                 primaryLabel: "Insert boleto code",
-                primaryOnPressed: () {},
+                primaryOnPressed: () {
+                  Navigator.pushReplacementNamed(context, "/insert_boleto");
+                },
                 secundaryLabel: "Add from galerry",
                 secundaryOnPressed: () {},
               ),
@@ -92,10 +94,12 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                   subtitle: "Try to scan again or enter your bank slip code",
                   primaryLabel: "scan again",
                   primaryOnPressed: () {
-                    controller.getAvailableCameras();
+                    controller.scanWithCamera();
                   },
                   secundaryLabel: "Enter code",
-                  secundaryOnPressed: () {},
+                  secundaryOnPressed: () {
+                    Navigator.pushReplacementNamed(context, "/insert_boleto");
+                  },
                 );
               } else {
                 return Container();
