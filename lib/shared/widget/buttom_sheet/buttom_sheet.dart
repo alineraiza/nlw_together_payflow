@@ -3,7 +3,7 @@ import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/themes/appcolors.dart';
 import 'package:payflow/shared/widget/set_label_buttons/set_label_buttons.dart';
 
-class ButtomSheetWidget extends StatelessWidget {
+class BottomSheetWidget extends StatelessWidget {
   final String primaryLabel;
   final VoidCallback primaryOnPressed;
   final String secundaryLabel;
@@ -11,7 +11,7 @@ class ButtomSheetWidget extends StatelessWidget {
   final String title;
   final String subtitle;
 
-  const ButtomSheetWidget(
+  const BottomSheetWidget(
       {Key? key,
       required this.primaryLabel,
       required this.primaryOnPressed,
