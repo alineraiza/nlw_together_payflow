@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/modules/home/home_controller.dart';
+import 'package:payflow/modules/meus_boletos/meus_boletos_pages.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/themes/appcolors.dart';
+import 'package:payflow/shared/widget/boleto_list/boleto_list_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,7 +15,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final controller = HomeController();
   final pages = [
-    Container(color: Colors.red),
+    MeusBoletosPage(),
+    Container(
+      child:  BoletoListWidget()
+    ),
     Container(color: Colors.blue),
   ];
   @override
@@ -72,8 +77,6 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 // Navigator.pushNamed(context, "/barcode_scanner");
                Navigator.pushNamed(context, "/insert_boleto");
-
-                
               },
               child: Container(
                 height: 56,
